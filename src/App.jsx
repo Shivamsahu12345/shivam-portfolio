@@ -242,14 +242,12 @@ function QuoteBlock() {
 // ══════════════════════════════════════════════
 function SkillMatrix() {
   return (
-    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+    <div style={{ maxWidth: 700 }}>
       {SKILLS_MATRIX.map((row, i) => (
         <Reveal key={row.cat} delay={i * 0.08}>
-          <div className="skill-row" style={{
-            display: "grid", gridTemplateColumns: "minmax(140px, 180px) 1fr",
-            gap: 24, padding: "20px 0",
+          <div className="matrix-row" style={{
+            padding: "20px 0",
             borderBottom: i < SKILLS_MATRIX.length - 1 ? "1px solid var(--border)" : "none",
-            alignItems: "baseline",
           }}>
             <div style={{
               fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)",
@@ -278,7 +276,7 @@ function SkillMatrix() {
       ))}
       <div style={{
         marginTop: 16, fontSize: 11, color: "var(--text-muted)", fontFamily: "var(--font-mono)",
-        textAlign: "right", letterSpacing: 0.5,
+        letterSpacing: 0.5,
       }}>
         <span style={{ color: "var(--accent)" }}>●</span> primary &nbsp; · &nbsp; comfortable
       </div>
@@ -291,14 +289,12 @@ function SkillMatrix() {
 // ══════════════════════════════════════════════
 function CurrentlyBlock() {
   return (
-    <div style={{ maxWidth: 720, margin: "0 auto" }}>
+    <div style={{ maxWidth: 700 }}>
       {CURRENTLY.map((item, i) => (
         <Reveal key={item.label} delay={i * 0.08}>
-          <div style={{
-            display: "grid", gridTemplateColumns: "minmax(140px, 180px) 1fr",
-            gap: 24, padding: "18px 0",
+          <div className="matrix-row" style={{
+            padding: "18px 0",
             borderBottom: i < CURRENTLY.length - 1 ? "1px solid var(--border)" : "none",
-            alignItems: "baseline",
           }}>
             <div style={{
               fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)",
@@ -696,7 +692,7 @@ export default function Portfolio() {
           --card-bg: #16181d;
           --text-primary: #e8e4de;
           --text-secondary: #a09a90;
-          --text-muted: #635f58;
+          --text-muted: #8a8478;
           --accent: #c8a850;
           --accent-dim: rgba(200,168,80,0.1);
           --accent-border: rgba(200,168,80,0.25);
@@ -753,6 +749,20 @@ export default function Portfolio() {
 
         .project-tab { transition: all 0.2s; }
         .project-tab:hover { border-color: var(--accent-border) !important; color: var(--accent) !important; }
+
+        .matrix-row {
+          display: grid;
+          grid-template-columns: minmax(140px, 180px) 1fr;
+          gap: 24px;
+          align-items: baseline;
+        }
+
+        @media (max-width: 600px) {
+          .matrix-row {
+            grid-template-columns: 1fr;
+            gap: 4px;
+          }
+        }
 
         @media (max-width: 720px) {
           .nav-desktop { display: none !important; }
@@ -864,7 +874,7 @@ export default function Portfolio() {
             <p style={{ marginTop: 18 }}>
               That instinct now drives my work as an engineer at ServiceNow, where I build platform features for application security and vulnerability management. The code I write gets depended on by other engineers — and I write it knowing exactly how it'll be tested and where it'll fail first.
             </p>
-            <p style={{ marginTop: 18, color: "var(--text-muted)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 16 }}>
+            <p style={{ marginTop: 18, color: "var(--text-secondary)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 17 }}>
               When I'm not writing code, I'm probably thinking about philosophy, exploring spirituality, or convincing someone to play Dumb Charades.
             </p>
           </div>
@@ -875,7 +885,7 @@ export default function Portfolio() {
       <section id="currently" style={{ maxWidth: 1020, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="02" title="Currently" meta="updated may 2026" />
         <Reveal delay={0.05}>
-          <p style={{ color: "var(--text-muted)", fontSize: 14, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic", maxWidth: 560 }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: 15, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic", maxWidth: 560 }}>
             Inspired by Derek Sivers' /now page — a snapshot of where I am, not where I've been.
           </p>
         </Reveal>
@@ -949,7 +959,7 @@ export default function Portfolio() {
 
         {/* Achievements strip */}
         <Reveal delay={0.2}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 14, maxWidth: 720, margin: "48px auto 0" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 14, maxWidth: 700, marginTop: 48 }}>
             {[
               { icon: "🛡️", text: "Prevented ₹100M+ production bug at PhonePe" },
               { icon: "🏆", text: "BEAT Rockstar Award — QA, automation & risk" },
@@ -978,7 +988,7 @@ export default function Portfolio() {
           </div>
         </Reveal>
         <Reveal delay={0.05}>
-          <p style={{ color: "var(--text-muted)", fontSize: 15, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: 15, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
             Small, interactive things — built right into this page. Pick one and play.
           </p>
         </Reveal>
