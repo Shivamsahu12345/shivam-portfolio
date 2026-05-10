@@ -255,7 +255,7 @@ function SkillMatrix() {
             }}>
               {row.cat}
             </div>
-            <div style={{ fontFamily: "var(--font-serif)", fontSize: 18, lineHeight: 1.7, letterSpacing: "-0.005em" }}>
+            <div style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(16px, 1.8vw, 18px)", lineHeight: 1.7, letterSpacing: "-0.005em" }}>
               {row.primary.map((s, j) => (
                 <span key={s}>
                   <span style={{ color: "var(--accent)", fontWeight: 600 }}>{s}</span>
@@ -303,7 +303,7 @@ function CurrentlyBlock() {
               {item.label}
             </div>
             <div style={{
-              fontFamily: "var(--font-serif)", fontSize: 18, lineHeight: 1.7,
+              fontFamily: "var(--font-serif)", fontSize: "clamp(16px, 1.8vw, 18px)", lineHeight: 1.7,
               color: "var(--text-primary)", letterSpacing: "-0.005em",
             }}>
               {item.text}
@@ -369,7 +369,7 @@ function BugSquasher() {
         </div>
       ) : (
         <div>
-          {timeLeft === 0 && <p style={{ color: "var(--accent)", fontSize: 18, marginBottom: 14, fontFamily: "var(--font-serif)" }}>You squashed {score} bugs!</p>}
+          {timeLeft === 0 && <p style={{ color: "var(--accent)", fontSize: "clamp(16px, 1.8vw, 18px)", marginBottom: 14, fontFamily: "var(--font-serif)" }}>You squashed {score} bugs!</p>}
           <button onClick={start} className="btn-primary">{timeLeft === 0 ? "Again" : "Start"}</button>
         </div>
       )}
@@ -625,7 +625,7 @@ function SectionHeader({ num, title, meta }) {
     <Reveal>
       <div style={{ display: "flex", gap: 14, alignItems: "center", marginBottom: 40, flexWrap: "wrap" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>{num}</span>
-        <span style={{ fontFamily: "var(--font-serif)", fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em" }}>{title}</span>
+        <span style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(28px, 4.5vw, 40px)", fontWeight: 700, letterSpacing: "-0.02em" }}>{title}</span>
         <div style={{ flex: 1, height: 1, background: "var(--border)", marginLeft: 14, minWidth: 40 }} />
         {meta && <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)", letterSpacing: 1, textTransform: "uppercase" }}>{meta}</span>}
       </div>
@@ -768,6 +768,8 @@ export default function Portfolio() {
           .nav-desktop { display: none !important; }
           .hero-grid { flex-direction: column !important; text-align: center !important; gap: 32px !important; }
           .hero-aside { display: none !important; }
+          .footer-right { text-align: left !important; }
+          .project-tab { padding: 8px 14px !important; }
         }
       `}</style>
 
@@ -786,7 +788,7 @@ export default function Portfolio() {
         background: "rgba(12,14,18,0.88)", backdropFilter: "blur(20px)",
         borderBottom: "1px solid var(--border)",
       }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 28px", display: "flex", justifyContent: "space-between", alignItems: "center", height: 52 }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px, 3vw, 28px)", display: "flex", justifyContent: "space-between", alignItems: "center", height: 52 }}>
           <span style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 20, color: "var(--accent)", letterSpacing: "-0.02em" }}>S.</span>
           <div className="nav-desktop" style={{ display: "flex", alignItems: "center", gap: 0 }}>
             {NAV.map((n) => (
@@ -798,7 +800,7 @@ export default function Portfolio() {
       </nav>
 
       {/* HERO */}
-      <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "120px 28px 80px", maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 2 }}>
+      <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "clamp(100px, 14vw, 120px) clamp(20px, 3vw, 28px) clamp(60px, 8vw, 80px)", maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 2 }}>
         <div className="hero-grid" style={{ display: "flex", gap: 60, alignItems: "center", width: "100%" }}>
           <div style={{ flex: "1 1 55%" }}>
             <Reveal>
@@ -809,7 +811,7 @@ export default function Portfolio() {
             <Reveal delay={0.1}>
               <h1 style={{
                 fontFamily: "var(--font-serif)", fontWeight: 700,
-                fontSize: "clamp(40px, 6vw, 70px)", lineHeight: 1.1,
+                fontSize: "clamp(34px, 7vw, 70px)", lineHeight: 1.1,
                 letterSpacing: "-0.03em", marginBottom: 20, color: "var(--text-primary)",
               }}>
                 I used to break<br />software for a living.<br />
@@ -817,7 +819,7 @@ export default function Portfolio() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p style={{ fontSize: 18, lineHeight: 1.8, color: "var(--text-secondary)", maxWidth: 480, marginBottom: 32 }}>
+              <p style={{ fontSize: "clamp(16px, 1.8vw, 18px)", lineHeight: 1.8, color: "var(--text-secondary)", maxWidth: 480, marginBottom: 32 }}>
                 Four years across quality engineering and platform development. Currently shipping security integrations at ServiceNow. Still hunting bugs — just from the other side now.
               </p>
             </Reveal>
@@ -859,22 +861,22 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 28px", position: "relative", zIndex: 2 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(20px, 3vw, 28px)", position: "relative", zIndex: 2 }}>
         <div style={{ height: 1, background: "var(--border)" }} />
       </div>
 
       {/* ABOUT */}
-      <section id="about" style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 28px", position: "relative", zIndex: 2 }}>
+      <section id="about" style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(60px, 8vw, 80px) clamp(20px, 3vw, 28px)", position: "relative", zIndex: 2 }}>
         <SectionHeader num="01" title="About" />
         <Reveal delay={0.1}>
-          <div style={{ maxWidth: 640, fontSize: 18, lineHeight: 1.9, color: "var(--text-secondary)" }}>
+          <div style={{ maxWidth: 640, fontSize: "clamp(16px, 1.8vw, 18px)", lineHeight: 1.9, color: "var(--text-secondary)" }}>
             <p>
               I started as an SDET — writing automation frameworks, untangling flaky tests, learning how software really breaks. Three years of that gives you an instinct for reliability that's hard to get any other way.
             </p>
             <p style={{ marginTop: 18 }}>
               That instinct now drives my work as an engineer at ServiceNow, where I build platform features for application security and vulnerability management. The code I write gets depended on by other engineers — and I write it knowing exactly how it'll be tested and where it'll fail first.
             </p>
-            <p style={{ marginTop: 18, color: "var(--text-secondary)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 18 }}>
+            <p style={{ marginTop: 18, color: "var(--text-secondary)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: "clamp(16px, 1.8vw, 18px)" }}>
               When I'm not writing code, I'm probably thinking about philosophy, exploring spirituality, or convincing someone to play Dumb Charades.
             </p>
           </div>
@@ -882,7 +884,7 @@ export default function Portfolio() {
       </section>
 
       {/* CURRENTLY */}
-      <section id="currently" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="currently" style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(48px, 6vw, 60px) clamp(20px, 3vw, 28px) clamp(60px, 8vw, 80px)", position: "relative", zIndex: 2 }}>
         <SectionHeader num="02" title="Currently" meta="updated may 2026" />
         <Reveal delay={0.05}>
           <p style={{ color: "var(--text-secondary)", fontSize: 16, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic", maxWidth: 560 }}>
@@ -893,7 +895,7 @@ export default function Portfolio() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="experience" style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(48px, 6vw, 60px) clamp(20px, 3vw, 28px) clamp(60px, 8vw, 80px)", position: "relative", zIndex: 2 }}>
         <SectionHeader num="03" title="Experience" />
         <div style={{ maxWidth: 700 }}>
           {EXPERIENCE.map((job, i) => (
@@ -953,7 +955,7 @@ export default function Portfolio() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="skills" style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(48px, 6vw, 60px) clamp(20px, 3vw, 28px) clamp(60px, 8vw, 80px)", position: "relative", zIndex: 2 }}>
         <SectionHeader num="04" title="Skills" />
         <SkillMatrix />
 
@@ -979,11 +981,11 @@ export default function Portfolio() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="projects" style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(48px, 6vw, 60px) clamp(20px, 3vw, 28px) clamp(60px, 8vw, 80px)", position: "relative", zIndex: 2 }}>
         <Reveal>
           <div style={{ display: "flex", gap: 14, alignItems: "center", marginBottom: 14 }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>05</span>
-            <span style={{ fontFamily: "var(--font-serif)", fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em" }}>Projects</span>
+            <span style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(28px, 4.5vw, 40px)", fontWeight: 700, letterSpacing: "-0.02em" }}>Projects</span>
             <div style={{ flex: 1, height: 1, background: "var(--border)", marginLeft: 14 }} />
           </div>
         </Reveal>
@@ -1024,7 +1026,7 @@ export default function Portfolio() {
       </section>
 
       {/* QUOTES */}
-      <section id="thoughts" style={{ padding: "80px 28px", position: "relative", zIndex: 2 }}>
+      <section id="thoughts" style={{ padding: "clamp(60px, 8vw, 80px) clamp(20px, 3vw, 28px)", position: "relative", zIndex: 2 }}>
         <div style={{
           position: "absolute", inset: 0, zIndex: 0,
           background: "radial-gradient(ellipse at center, rgba(200,168,80,0.03) 0%, transparent 70%)",
@@ -1044,11 +1046,11 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 28px", position: "relative", zIndex: 2 }}>
+      <section id="contact" style={{ maxWidth: 1200, margin: "0 auto", padding: "clamp(60px, 8vw, 80px) clamp(20px, 3vw, 28px)", position: "relative", zIndex: 2 }}>
         <SectionHeader num="06" title="Say Hello" />
         <Reveal delay={0.1}>
           <div style={{ maxWidth: 540 }}>
-            <p style={{ color: "var(--text-secondary)", fontSize: 18, lineHeight: 1.8, marginBottom: 28 }}>
+            <p style={{ color: "var(--text-secondary)", fontSize: "clamp(16px, 1.8vw, 18px)", lineHeight: 1.8, marginBottom: 28 }}>
               Open to conversations about engineering, testing, philosophy, or anything genuinely interesting. I reply to every message.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
@@ -1080,7 +1082,7 @@ export default function Portfolio() {
               {new Date().getFullYear()} · Hyderabad, India
             </div>
           </div>
-          <div style={{ textAlign: "right" }}>
+          <div className="footer-right" style={{ textAlign: "right" }}>
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)", lineHeight: 1.7 }}>
               <div>Built with React, Cormorant Garamond,</div>
               <div>and a quiet cup of chai.</div>
