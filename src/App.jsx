@@ -40,7 +40,7 @@ const QUOTES = [
 const EXPERIENCE = [
   {
     num: "01", role: "Software Engineer", company: "ServiceNow", location: "Hyderabad",
-    period: "Nov 2025 – Present", tag: "IC-2",
+    period: "Nov 2025 – Present", tag: "SaaS, Enterprise platform",
     bullets: [
       "Building application security and vulnerability data integrations — CVE, CVD, NVD pipelines processing data across sources like EUVD and JVN on the ServiceNow platform.",
       "Developing platform features involving complex reference field behaviors, scripting, and internal developer tooling for enterprise security modules.",
@@ -58,7 +58,7 @@ const EXPERIENCE = [
   },
   {
     num: "03", role: "Test Automation Engineer II", company: "Acuity Knowledge Partners", location: "Bangalore",
-    period: "Feb 2022 – Feb 2025", tag: "B2B SaaS",
+    period: "Feb 2022 – Feb 2025", tag: "B2B, SaaS",
     bullets: [
       "Led UI automation (Selenium, xUnit, C#) and API testing (Postman, RestSharp) across 10+ projects — reduced manual effort by 40%, bugs by 35%.",
       "Refactored core framework error handling and retry logic, cutting execution time by 20-25%.",
@@ -303,7 +303,7 @@ function CurrentlyBlock() {
               {item.label}
             </div>
             <div style={{
-              fontFamily: "var(--font-serif)", fontSize: 17, lineHeight: 1.7,
+              fontFamily: "var(--font-serif)", fontSize: 18, lineHeight: 1.7,
               color: "var(--text-primary)", letterSpacing: "-0.005em",
             }}>
               {item.text}
@@ -786,7 +786,7 @@ export default function Portfolio() {
         background: "rgba(12,14,18,0.88)", backdropFilter: "blur(20px)",
         borderBottom: "1px solid var(--border)",
       }}>
-        <div style={{ maxWidth: 1020, margin: "0 auto", padding: "0 28px", display: "flex", justifyContent: "space-between", alignItems: "center", height: 52 }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 28px", display: "flex", justifyContent: "space-between", alignItems: "center", height: 52 }}>
           <span style={{ fontFamily: "var(--font-serif)", fontWeight: 700, fontSize: 20, color: "var(--accent)", letterSpacing: "-0.02em" }}>S.</span>
           <div className="nav-desktop" style={{ display: "flex", alignItems: "center", gap: 0 }}>
             {NAV.map((n) => (
@@ -798,7 +798,7 @@ export default function Portfolio() {
       </nav>
 
       {/* HERO */}
-      <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "120px 28px 80px", maxWidth: 1020, margin: "0 auto", position: "relative", zIndex: 2 }}>
+      <section style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "120px 28px 80px", maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 2 }}>
         <div className="hero-grid" style={{ display: "flex", gap: 60, alignItems: "center", width: "100%" }}>
           <div style={{ flex: "1 1 55%" }}>
             <Reveal>
@@ -809,7 +809,7 @@ export default function Portfolio() {
             <Reveal delay={0.1}>
               <h1 style={{
                 fontFamily: "var(--font-serif)", fontWeight: 700,
-                fontSize: "clamp(38px, 6vw, 62px)", lineHeight: 1.1,
+                fontSize: "clamp(40px, 6vw, 70px)", lineHeight: 1.1,
                 letterSpacing: "-0.03em", marginBottom: 20, color: "var(--text-primary)",
               }}>
                 I used to break<br />software for a living.<br />
@@ -817,7 +817,7 @@ export default function Portfolio() {
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p style={{ fontSize: 17, lineHeight: 1.8, color: "var(--text-secondary)", maxWidth: 480, marginBottom: 32 }}>
+              <p style={{ fontSize: 18, lineHeight: 1.8, color: "var(--text-secondary)", maxWidth: 480, marginBottom: 32 }}>
                 Four years across quality engineering and platform development. Currently shipping security integrations at ServiceNow. Still hunting bugs — just from the other side now.
               </p>
             </Reveal>
@@ -859,22 +859,22 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <div style={{ maxWidth: 1020, margin: "0 auto", padding: "0 28px", position: "relative", zIndex: 2 }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 28px", position: "relative", zIndex: 2 }}>
         <div style={{ height: 1, background: "var(--border)" }} />
       </div>
 
       {/* ABOUT */}
-      <section id="about" style={{ maxWidth: 1020, margin: "0 auto", padding: "80px 28px", position: "relative", zIndex: 2 }}>
+      <section id="about" style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 28px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="01" title="About" />
         <Reveal delay={0.1}>
-          <div style={{ maxWidth: 640, fontSize: 17, lineHeight: 1.9, color: "var(--text-secondary)" }}>
+          <div style={{ maxWidth: 640, fontSize: 18, lineHeight: 1.9, color: "var(--text-secondary)" }}>
             <p>
               I started as an SDET — writing automation frameworks, untangling flaky tests, learning how software really breaks. Three years of that gives you an instinct for reliability that's hard to get any other way.
             </p>
             <p style={{ marginTop: 18 }}>
               That instinct now drives my work as an engineer at ServiceNow, where I build platform features for application security and vulnerability management. The code I write gets depended on by other engineers — and I write it knowing exactly how it'll be tested and where it'll fail first.
             </p>
-            <p style={{ marginTop: 18, color: "var(--text-secondary)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 17 }}>
+            <p style={{ marginTop: 18, color: "var(--text-secondary)", fontFamily: "var(--font-serif)", fontStyle: "italic", fontSize: 18 }}>
               When I'm not writing code, I'm probably thinking about philosophy, exploring spirituality, or convincing someone to play Dumb Charades.
             </p>
           </div>
@@ -882,7 +882,7 @@ export default function Portfolio() {
       </section>
 
       {/* CURRENTLY */}
-      <section id="currently" style={{ maxWidth: 1020, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="currently" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="02" title="Currently" meta="updated may 2026" />
         <Reveal delay={0.05}>
           <p style={{ color: "var(--text-secondary)", fontSize: 15, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic", maxWidth: 560 }}>
@@ -893,7 +893,7 @@ export default function Portfolio() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experience" style={{ maxWidth: 1020, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="experience" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="03" title="Experience" />
         <div style={{ maxWidth: 700 }}>
           {EXPERIENCE.map((job, i) => (
@@ -953,7 +953,7 @@ export default function Portfolio() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" style={{ maxWidth: 1020, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="skills" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="04" title="Skills" />
         <SkillMatrix />
 
@@ -979,7 +979,7 @@ export default function Portfolio() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" style={{ maxWidth: 1020, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
+      <section id="projects" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <Reveal>
           <div style={{ display: "flex", gap: 14, alignItems: "center", marginBottom: 14 }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>05</span>
@@ -1044,11 +1044,11 @@ export default function Portfolio() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" style={{ maxWidth: 1020, margin: "0 auto", padding: "80px 28px", position: "relative", zIndex: 2 }}>
+      <section id="contact" style={{ maxWidth: 1200, margin: "0 auto", padding: "80px 28px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="06" title="Say Hello" />
         <Reveal delay={0.1}>
           <div style={{ maxWidth: 540 }}>
-            <p style={{ color: "var(--text-secondary)", fontSize: 17, lineHeight: 1.8, marginBottom: 28 }}>
+            <p style={{ color: "var(--text-secondary)", fontSize: 18, lineHeight: 1.8, marginBottom: 28 }}>
               Open to conversations about engineering, testing, philosophy, or anything genuinely interesting. I reply to every message.
             </p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>
@@ -1071,7 +1071,7 @@ export default function Portfolio() {
         borderTop: "1px solid var(--border)", padding: "28px",
         position: "relative", zIndex: 2,
       }}>
-        <div style={{ maxWidth: 1020, margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 14, alignItems: "flex-start" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 14, alignItems: "flex-start" }}>
           <div>
             <div style={{ fontFamily: "var(--font-serif)", fontSize: 17, color: "var(--text-primary)", marginBottom: 4 }}>
               Shivam Sahu
@@ -1089,7 +1089,7 @@ export default function Portfolio() {
           </div>
         </div>
         <div style={{
-          maxWidth: 1020, margin: "20px auto 0", paddingTop: 14, borderTop: "1px solid var(--border)",
+          maxWidth: 1200, margin: "20px auto 0", paddingTop: 14, borderTop: "1px solid var(--border)",
           fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--text-muted)", textAlign: "center", letterSpacing: 0.5,
         }}>
           ↑↑↓↓←→←→BA — try it
