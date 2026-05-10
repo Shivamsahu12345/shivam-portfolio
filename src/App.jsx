@@ -260,14 +260,14 @@ function SkillMatrix() {
                 <span key={s}>
                   <span style={{ color: "var(--accent)", fontWeight: 600 }}>{s}</span>
                   {(j < row.primary.length - 1 || row.secondary.length > 0) && (
-                    <span style={{ color: "var(--text-muted)", margin: "0 8px" }}>·</span>
+                    <span style={{ color: "var(--text-muted)" }}>{" \u00B7 "}</span>
                   )}
                 </span>
               ))}
               {row.secondary.map((s, j) => (
                 <span key={s} style={{ color: "var(--text-secondary)" }}>
                   {s}
-                  {j < row.secondary.length - 1 && <span style={{ color: "var(--text-muted)", margin: "0 8px" }}>·</span>}
+                  {j < row.secondary.length - 1 && <span style={{ color: "var(--text-muted)" }}>{" \u00B7 "}</span>}
                 </span>
               ))}
             </div>
