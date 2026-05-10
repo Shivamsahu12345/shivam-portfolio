@@ -232,7 +232,7 @@ function QuoteBlock() {
       <div style={{ marginTop: 16, fontSize: 13, fontFamily: "var(--font-mono)", color: "var(--accent)", letterSpacing: 1, textTransform: "uppercase" }}>
         — {q.author}
       </div>
-      <div style={{ marginTop: 12, fontSize: 11, color: "var(--text-muted)" }}>tap for another thought</div>
+      <div style={{ marginTop: 14, fontSize: 13, color: "var(--text-secondary)", fontFamily: "var(--font-mono)", letterSpacing: 0.5 }}>[tap for another thought]</div>
     </div>
   );
 }
@@ -556,7 +556,7 @@ function FamilyGames() {
 
   return (
     <div>
-      <p style={{ color: "var(--text-muted)", fontSize: 14, marginBottom: 14, textAlign: "center", fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
+      <p style={{ color: "var(--text-secondary)", fontSize: 15, marginBottom: 14, textAlign: "center", fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
         Put the screens down. Pick a game. Laugh until it hurts.
       </p>
       <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16, flexWrap: "wrap" }}>
@@ -624,8 +624,8 @@ function SectionHeader({ num, title, meta }) {
   return (
     <Reveal>
       <div style={{ display: "flex", gap: 14, alignItems: "center", marginBottom: 40, flexWrap: "wrap" }}>
-        <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>{num}</span>
-        <span style={{ fontFamily: "var(--font-serif)", fontSize: 32, fontWeight: 700, letterSpacing: "-0.02em" }}>{title}</span>
+        <span style={{ fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>{num}</span>
+        <span style={{ fontFamily: "var(--font-serif)", fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em" }}>{title}</span>
         <div style={{ flex: 1, height: 1, background: "var(--border)", marginLeft: 14, minWidth: 40 }} />
         {meta && <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--text-muted)", letterSpacing: 1, textTransform: "uppercase" }}>{meta}</span>}
       </div>
@@ -752,7 +752,7 @@ export default function Portfolio() {
 
         .matrix-row {
           display: grid;
-          grid-template-columns: minmax(140px, 180px) 1fr;
+          grid-template-columns: 160px 1fr;
           gap: 24px;
           align-items: baseline;
         }
@@ -802,7 +802,7 @@ export default function Portfolio() {
         <div className="hero-grid" style={{ display: "flex", gap: 60, alignItems: "center", width: "100%" }}>
           <div style={{ flex: "1 1 55%" }}>
             <Reveal>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2, marginBottom: 20 }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2, marginBottom: 20 }}>
                 Shivam Sahu · Software Engineer
               </div>
             </Reveal>
@@ -885,7 +885,7 @@ export default function Portfolio() {
       <section id="currently" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <SectionHeader num="02" title="Currently" meta="updated may 2026" />
         <Reveal delay={0.05}>
-          <p style={{ color: "var(--text-secondary)", fontSize: 15, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic", maxWidth: 560 }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: 16, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic", maxWidth: 560 }}>
             Inspired by Derek Sivers' /now page — a snapshot of where I am, not where I've been.
           </p>
         </Reveal>
@@ -959,7 +959,7 @@ export default function Portfolio() {
 
         {/* Achievements strip */}
         <Reveal delay={0.2}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 14, maxWidth: 700, marginTop: 48 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12, maxWidth: 700, marginTop: 48 }}>
             {[
               { icon: "🛡️", text: "Prevented ₹100M+ production bug at PhonePe" },
               { icon: "🏆", text: "BEAT Rockstar Award — QA, automation & risk" },
@@ -982,13 +982,13 @@ export default function Portfolio() {
       <section id="projects" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 28px 80px", position: "relative", zIndex: 2 }}>
         <Reveal>
           <div style={{ display: "flex", gap: 14, alignItems: "center", marginBottom: 14 }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>05</span>
-            <span style={{ fontFamily: "var(--font-serif)", fontSize: 32, fontWeight: 700, letterSpacing: "-0.02em" }}>Projects</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: 14, color: "var(--accent)", textTransform: "uppercase", letterSpacing: 2 }}>05</span>
+            <span style={{ fontFamily: "var(--font-serif)", fontSize: 40, fontWeight: 700, letterSpacing: "-0.02em" }}>Projects</span>
             <div style={{ flex: 1, height: 1, background: "var(--border)", marginLeft: 14 }} />
           </div>
         </Reveal>
         <Reveal delay={0.05}>
-          <p style={{ color: "var(--text-secondary)", fontSize: 15, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
+          <p style={{ color: "var(--text-secondary)", fontSize: 16, marginBottom: 28, fontFamily: "var(--font-serif)", fontStyle: "italic" }}>
             Small, interactive things — built right into this page. Pick one and play.
           </p>
         </Reveal>
